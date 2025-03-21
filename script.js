@@ -6,9 +6,13 @@ function getCompChoice() {
 
 // -------------------------------------------------------Human Choice Function------------------------------------------------------
 
-
+// function getHumChoice(){
+//   let input = prompt("Enter your choice") ;
+//   input = input.toLowerCase();
+//   return input;
 
 // ----------------------------------------------------------Event Addition----------------------------------------------------------
+//----------------------------------------------------------New Human Choice---------------------------------------------------------
 
 const Rock = document.querySelector("#Rock");
 Rock.addEventListener("click", () => {
@@ -38,69 +42,72 @@ let cScore = 0;
 
 function playboy(hChoice) {
   let cChoice = getCompChoice();
-  if (hChoice == "rock" && cChoice == 0) {
-    console.log("Its a tie");
-    console.log("The score is : comp - " + cScore + " & Human - " + hScore);
+  const displayHuman = document.getElementById("displayHuman");
+  const displayComputer = document.getElementById("displayComputer");
+  const text = document.getElementById("txt");
+  if (hScore != 5 && cScore != 5){
+    if (hChoice == "rock" && cChoice == 0) {
+      text.innerHTML = "Its a tie";
+      console.log("The score is : comp - " + cScore + " & Human - " + hScore);
+    }
+    else if (hChoice == "rock" && cChoice == 1) {
+      cScore++;
+      text.innerHTML = "Computer Wins";
+      console.log("The score is : comp - " + cScore + " & Human - " + hScore);
+      displayComputer.innerHTML = cScore;
+    }
+    else if (hChoice == "rock" && cChoice == 2) {
+      hScore++;
+      text.innerHTML = "Human Wins";
+      console.log("The score is : comp - " + cScore + " & Human - " + hScore);
+      displayHuman.innerHTML = hScore;
+    }
+    else if (hChoice == "paper" && cChoice == 0) {
+      hScore++;
+      text.innerHTML = "Human Wins";
+      console.log("The score is : comp - " + cScore + " & Human - " + hScore);
+      displayHuman.innerHTML = hScore;
+    }
+    else if (hChoice == "paper" && cChoice == 1) {
+      text.innerHTML = "Its a tie";
+      console.log("The score is : comp - " + cScore + " & Human - " + hScore);
+    }
+    else if (hChoice == "paper" && cChoice == 2) {
+      cScore++;
+      text.innerHTML = "Computer Wins";
+      console.log("The score is : comp - " + cScore + " & Human - " + hScore);
+      displayComputer.innerHTML = cScore;
+    }
+    else if (hChoice == "scissors" && cChoice == 0) {
+      cScore++;
+      text.innerHTML = "Computer Wins";
+      console.log("The score is : comp - " + cScore + " & Human - " + hScore);
+      displayComputer.innerHTML = cScore;
+    }
+    else if (hChoice == "scissors" && cChoice == 1) {
+      hScore++;
+      text.innerHTML = "Human Wins";
+      console.log("The score is : comp - " + cScore + " & Human - " + hScore);
+      displayHuman.innerHTML = hScore;
+    }
+    else if (hChoice == "scissors" && cChoice == 2) {
+      text.innerHTML = "Its a tie";
+      console.log("The score is : comp - " + cScore + " & Human - " + hScore);
+    }
+    else {
+      console.log("Invalid Input");
+    }
   }
-  else if (hChoice == "rock" && cChoice == 1) {
-    cScore = cScore + 1;
-    console.log("Computer Wins");
-    console.log("The score is : comp - " + cScore + " & Human - " + hScore);
-    return cScore;
-  }
-  else if (hChoice == "rock" && cChoice == 2) {
-    hScore = hScore + 1;
-    console.log("Human Wins");
-    console.log("The score is : comp - " + cScore + " & Human - " + hScore);
-    return hScore;
-  }
-  else if (hChoice == "paper" && cChoice == 0) {
-    hScore = hScore + 1;
-    console.log("Human Wins");
-    console.log("The score is : comp - " + cScore + " & Human - " + hScore);
-    return hScore;
-  }
-  else if (hChoice == "paper" && cChoice == 1) {
-    console.log("Its a tie");
-    console.log("The score is : comp - " + cScore + " & Human - " + hScore);
-  }
-  else if (hChoice == "paper" && cChoice == 2) {
-    cScore = cScore + 1;
-    console.log("Computer Wins");
-    console.log("The score is : comp - " + cScore + " & Human - " + hScore);
-    return cScore;
-  }
-  else if (hChoice == "scissors" && cChoice == 0) {
-    cScore = cScore + 1;
-    console.log("Computer Wins");
-    console.log("The score is : comp - " + cScore + " & Human - " + hScore);
-    return cScore;
-  }
-  else if (hChoice == "scissors" && cChoice == 1) {
-    hScore = hScore + 1;
-    console.log("Human Wins");
-    console.log("The score is : comp - " + cScore + " & Human - " + hScore);
-    return hScore;
-  }
-  else if (hChoice == "scissors" && cChoice == 2) {
-    console.log("Its a tie");
-    console.log("The score is : comp - " + cScore + " & Human - " + hScore);
-  }
-  else {
-    console.log("Invalid Input");
+  
+  else{
+    text.innerHTML = "Game Over";
   }
 }
 
 //-------------------------------------------------------------Display Score--------------------------------------------------------
 
-const displayHuman = document.querySelector("#displayHuman");
-displayHuman.innerHTML = hScore;
-const displayComputer = document.querySelector("#displayComputer");
-displayComputer.innerHTML = cScore;
+
+
+
 
 // console.log("Final score is Comp - " + cScore + " & Hum - " + hScore);
-
-function scoreCard() {
-
-}
-// 
