@@ -40,7 +40,7 @@ A simple **Rock Paper Scissors** game built using **HTML, CSS, and JavaScript**.
 
 ## 🔗 Live Demo
 
-[Click here to play](https://ashu7603.github.io/Rock-Paper-Sicssors/)
+[Click here to play](https://ashu7603.github.io/rock-paper-scissors/)
 
 ## 📌 Author
 
