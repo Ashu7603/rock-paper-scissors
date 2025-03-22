@@ -23,15 +23,6 @@ A simple **Rock Paper Scissors** game built using **HTML, CSS, and JavaScript**.
 4. The score updates accordingly.
 5. The game will end once either of the players score reaches 5.
 
-## 📂 Project Structure
-
-```plaintext
-📁 Rock-Paper-Scissors
- ┣ 📜 index.html  --> Main structure
- ┣ 📜 style.css   --> Game styling
- ┗ 📜 script.js   --> Game logic
-```
-
 ## 💡 Future Enhancements
 
 - Add animations
