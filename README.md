@@ -7,7 +7,6 @@ A simple **Rock Paper Scissors** game built using **HTML, CSS, and JavaScript**.
 - Interactive UI with real-time results
 - Randomized computer choices
 - Score tracking for both player and computer
-- Responsive design for different screen sizes
 
 ## 🛠️ Technologies Used
 
