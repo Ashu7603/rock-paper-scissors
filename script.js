@@ -57,43 +57,43 @@ function playboy(hChoice) {
   const displayComputer = document.getElementById("displayComputer");
   const text = document.getElementById("txt");
   if (hChoice == "rock" && cChoice == 0) {
-    text.innerHTML = "Its a tie";
+    text.innerHTML = "Its a tie both chooses rock";
   }
   else if (hChoice == "rock" && cChoice == 1) {
     cScore++;
-    text.innerHTML = "Computer Wins";
+    text.innerHTML = "Computer wins it chooses paper";
     displayComputer.innerHTML = cScore;
   }
   else if (hChoice == "rock" && cChoice == 2) {
     hScore++;
-    text.innerHTML = "Human Wins";
+    text.innerHTML = "Human Wins computer chooses scissors";
     displayHuman.innerHTML = hScore;
   }
   else if (hChoice == "paper" && cChoice == 0) {
     hScore++;
-    text.innerHTML = "Human Wins";
+    text.innerHTML = "Human Wins computer chooses rock";
     displayHuman.innerHTML = hScore;
   }
   else if (hChoice == "paper" && cChoice == 1) {
-    text.innerHTML = "Its a tie";
+    text.innerHTML = "Its a tie both chooses paper";
   }
   else if (hChoice == "paper" && cChoice == 2) {
     cScore++;
-    text.innerHTML = "Computer Wins";
+    text.innerHTML = "Computer Wins its chooses scissors";
     displayComputer.innerHTML = cScore;
   }
   else if (hChoice == "scissors" && cChoice == 0) {
     cScore++;
-    text.innerHTML = "Computer Wins";
+    text.innerHTML = "Computer Wins it chooses rock";
     displayComputer.innerHTML = cScore;
   }
   else if (hChoice == "scissors" && cChoice == 1) {
     hScore++;
-    text.innerHTML = "Human Wins";
+    text.innerHTML = "Human Wins computer chooses paper";
     displayHuman.innerHTML = hScore;
   }
   else if (hChoice == "scissors" && cChoice == 2) {
-    text.innerHTML = "Its a tie";
+    text.innerHTML = "Its a tie btoh chooses scissors";
   }
   if (hScore > 4 || cScore > 4){
     rockBtn.setAttribute("disabled", true);
